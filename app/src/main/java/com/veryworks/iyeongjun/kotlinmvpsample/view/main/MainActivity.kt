@@ -35,15 +35,15 @@ class MainActivity : AppCompatActivity() {
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
-                message.setText(R.string.title_home)
+                replace(R.id.container, homeFragment)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_dashboard -> {
-                message.setText(R.string.title_camera)
+            R.id.navigation_camera -> {
+                replace(R.id.container, cameraFragment)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_notifications -> {
-                message.setText(R.string.title_more)
+            R.id.navigation_more -> {
+                replace(R.id.container, moreFragment)
                 return@OnNavigationItemSelectedListener true
             }
         }
